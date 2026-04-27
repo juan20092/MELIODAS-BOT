@@ -30,12 +30,12 @@ global.kanekiAIJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.botname = "🍏 𝙆𝙖𝙣𝙚𝙠𝙞𝘽𝙤𝙩-𝙑𝟯 🕸️"
-global.textbot = "🍓 кαиєкι вσт ν3 • мα∂є ву ѕнα∂σω-χуz"
-global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝚂𝙷𝙰𝙳𝙾𝚆`°𝙲𝚘𝚛𝚎"
-global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ ѕнα∂σω`¢σяє"
-global.etiqueta = "✫.ƚԋҽ ʂԋαԃσɯ ƈσɾҽ  ⊹꙰ "
-global.gt = '© ᥴrᥱᥲ𝗍ᥱძ ᑲᥡ sʜᴀᴅᴏᴡ.xʏᴢ 🍃'
+global.botname = "♑︎𝐌𝐄𝐋𝐈𝐎𝐃𝐀𝐒 - 𝐁𝐎𝐓ꨄ"
+global.textbot = "︵✰𝕸𝖊𝖑𝖎𝖔𝖉𝖆𝖘-𝕭𝖔𝖙ᯓ • мα∂є ву 𝖏𝖚𝖆𝖓-𝖜𝖟7"
+global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ 𝖏𝖚𝖆𝖓-𝖜𝖟7"
+global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ 𝖏𝖚𝖆𝖓-𝖜𝖟7"
+global.etiqueta = "︵✰𝕸𝖊𝖑𝖎𝖔𝖉𝖆𝖘-𝕭𝖔𝖙ᯓ  ⊹꙰ "
+global.gt = '© ᥴrᥱᥲ𝗍ᥱძ ᑲᥡ 𝖏𝖚𝖆𝖓-𝖜𝖟7♑︎'
 
 global.currency = "¥enes"
 global.banner = "https://api.dix.lat/media2/1777327424999.jpg"
