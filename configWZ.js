@@ -12,18 +12,18 @@ global.botNumber = "" //Ejemplo: 573218138672
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-"51919199620",
-"51971285104"
+"573223702049",
+"573104125733"
 ]
 
-global.suittag = ["51919199620"] 
+global.suittag = ["573223702049"] 
 global.prems = []
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.libreria = "Baileys Multi Device"
 global.vs = "^1.8.2 • Latest"
-global.nameqr = "ᴋᴀɴᴇᴋɪ-ʙᴏᴛ.ᴍᴅ"
+global.nameqr = "♑︎𝐌𝐄𝐋𝐈𝐎𝐃𝐀𝐒 - 𝐁𝐎𝐓ꨄ"
 global.sessions = "Sessions/Principal"
 global.jadi = "Sessions/SubBot"
 global.kanekiAIJadibts = true
@@ -50,7 +50,7 @@ global.channel = "https://whatsapp.com/channel/0029VbC34Nt42DchIWA0q11f"
 global.github = "https://github.com/Shadow-nex/KanekiBot-V3"
 global.gmail = "juanboli2009@gmail.com"
 global.ch = {
-ch1: "120363422142340004@newsletter"
+ch1: "120363419404216418@newsletter"
 }
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
