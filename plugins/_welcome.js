@@ -77,7 +77,7 @@ function detectarPais(jid) {
 
 async function generarBienvenida({ conn, userId, groupMetadata, chat }) {
   const username = `@${userId.split('@')[0]}`
-  const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
+  const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://i.imgur.com/HUyM3Ny.jpeg')
 
   const fecha = new Date()
   const fechaTexto = fecha.toLocaleDateString("es-ES", { timeZone: "America/Mexico_City", day: 'numeric', month: 'long', year: 'numeric' })
@@ -108,7 +108,7 @@ Bienvenid@ al grupo *_${groupMetadata.subject}_*
 
 async function generarDespedida({ conn, userId, groupMetadata, chat }) {
   const username = `@${userId.split('@')[0]}`
-  const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
+  const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://i.imgur.com/HUyM3Ny.jpeg')
 
   const fecha = new Date()
   const fechaTexto = fecha.toLocaleDateString("es-ES", { timeZone: "America/Mexico_City", day: 'numeric', month: 'long', year: 'numeric' })
