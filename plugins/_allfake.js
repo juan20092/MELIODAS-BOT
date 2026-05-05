@@ -29,8 +29,25 @@ global.nombre = m.pushName || 'Anónimo'
 global.packsticker = `°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\n🌿 Usuario: ${nombre}\n🔮 Bot: ${botname}\n📆 Fecha: ${fecha}\nⴵ Hora: ${moment.tz('America/Caracas').format('HH:mm:ss')}`
 global.packsticker2 = `\n°.⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸⎯ܴ⎯̶᳞͇ࠝ⎯⃘̶⎯̸.°\n\n🍃 ${dev}`
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1 }
-}}, { quoted: m }
+global.fake = {
+  contextInfo: {
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: channelRD.id,
+      newsletterName: channelRD.name,
+      serverMessageId: -1,
+    },
+    externalAdReply: {
+      title: `•◍⃝߭۫ꯨꨄ🌟.࠭⤿ʅ ${botname} 𑁍ꥈ࣪⬪🍃`,
+      mediaUrl: null,
+      description: null,
+      previewType: "PHOTO",
+      thumbnailUrl: icono,
+      mediaType: 1,
+      renderLargerThumbnail: false,
+    },
+  },
+}
 
 var ase = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Lima" }))
 var hour = ase.getHours()
@@ -66,10 +83,7 @@ global.icono = [
 'https://api.dix.lat/media2/1777331725085.jpg',
 'https://api.dix.lat/media2/1777331743803.jpg'
 ].getRandom()
-/*
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: '', newsletterName: channelRD.name }, externalAdReply: { title: botname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnail: await (await fetch(icono)).buffer(), sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, mentionedJid: null }}
-}
-*/
+
 global.rcanal = {
   contextInfo: {
     isForwarded: true,
@@ -80,7 +94,6 @@ global.rcanal = {
     },
     externalAdReply: {
       title: `•◍⃝߭۫ꯨꨄ🌟.࠭⤿ʅ ${botname} 𑁍ꥈ࣪⬪🍃`,
-      body: `（つ /${nombre} • ${saludo}🍓꒱`,
       mediaUrl: null,
       description: null,
       previewType: "PHOTO",
