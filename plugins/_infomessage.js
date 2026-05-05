@@ -6,7 +6,7 @@ export async function before(m, { conn, participants}) {
 
   let usuario = `@${m.sender.split`@`[0]}`
 
-  let pp = await conn.getFile('https://files.catbox.moe/nh2sz1.jpg')
+  let pp = await conn.getFile('https://api.dix.lat/media/img_1777950921007_KeaXqRLjz.jpg')
     .then(r => r.data)
 
   let fkontak = {
@@ -18,7 +18,7 @@ export async function before(m, { conn, participants}) {
     },
     message: {
       locationMessage: {
-        name: '𝐕𝐈𝐏 𝐁𝐎𝐓',
+        name: '♑︎𝐌𝐄𝐋𝐈𝐎𝐃𝐀𝐒 - 𝐁𝐎𝐓ꨄ',
         jpegThumbnail: pp
       }
     },
@@ -50,23 +50,34 @@ export async function before(m, { conn, participants}) {
       }
     }
   } else if (chat.detect && m.messageStubType == 21) {
-    await this.sendMessage(m.chat, { text: `${usuario} \`𝐂𝐀𝐌𝐁𝐈𝐎 𝐄𝐋 𝐍𝐎𝐌𝐁𝐑𝐄 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐀:\`\n\n> *${m.messageStubParameters[0]}*`, mentions: [m.sender, ...groupAdmins.map(v => v.id)] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    await this.sendMessage(m.chat, { text: `〔 ✏️ 〕𝘕𝘰𝘮𝘣𝘳𝘦 𝘢𝘤𝘵𝘶𝘢𝘭𝘪𝘻𝘢𝘥𝘰
+> @${m.sender.split('@')[0]} → *${m.messageStubParameters[0]}*`, mentions: [m.sender] }, { quoted: fkontak })
   } else if (chat.detect && m.messageStubType == 22) {
-    await this.sendMessage(m.chat, { text: `${usuario} \`𝐇𝐀 𝐂𝐀𝐌𝐁𝐈𝐀𝐃𝐎 𝐋𝐀 𝐅𝐎𝐓𝐎 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 🏘️\``, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100}) 
+    await this.sendMessage(m.chat, { text: `〔 🖼️ 〕𝘍𝘰𝘵𝘰 𝘥𝘦𝘭 𝘨𝘳𝘶𝘱𝘰 𝘢𝘤𝘵𝘶𝘢𝘭𝘪𝘻𝘢𝘥𝘢
+> por @${m.sender.split('@')[0]}`, mentions: [m.sender] }, { quoted: fkontak })
   } else if (chat.detect && m.messageStubType == 24) {
-    await this.sendMessage(m.chat, { text: `${usuario} \`𝐂𝐀𝐌𝐁𝐈𝐎 𝐋𝐀 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍 𝐍𝐔𝐄𝐕𝐀 🛸\`\n\n> ${m.messageStubParameters[0]}`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    await this.sendMessage(m.chat, { text: `〔 📝 〕𝘋𝘦𝘴𝘤𝘳𝘪𝘱𝘤𝘪𝘰́𝘯 𝘢𝘤𝘵𝘶𝘢𝘭𝘪𝘻𝘢𝘥𝘢
+> por @${m.sender.split('@')[0]}
+
+${m.messageStubParameters[0]}`, mentions: [m.sender] }, { quoted: fkontak })
   } else if (chat.detect && m.messageStubType == 25) {
-    await this.sendMessage(m.chat, { text: `\`🎰 𝐀𝐇𝐎𝐑𝐀 🎰\`\n\n> *${m.messageStubParameters[0] == 'on' ? 'ꇙꄲ꒒ꄲ ᥲძmіᥒs' : '𝗍᥆ძ᥆s'}*⍴ᥙᥱძᥱᥒ ᥱძі𝗍ᥲr ᥣᥲ іᥒ𝖿᥆rmᥲᥴі᥆ᥒ ძᥱᥣ grᥙ⍴᥆`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    await this.sendMessage(m.chat, { text: `〔 ⚙️ 〕𝘐𝘯𝘧𝘰 𝘥𝘦𝘭 𝘨𝘳𝘶𝘱𝘰
+> Pueden editar: *${m.messageStubParameters[0] == 'on' ? 'solo admins' : 'todos'}*`, mentions: [m.sender] }, { quoted: fkontak })
   } else if (chat.detect && m.messageStubType == 26) {
-    await this.sendMessage(m.chat, { text: `𝐆𝐑𝐔𝐏𝐎 *${m.messageStubParameters[0] == 'on' ? '𝐂𝐄𝐑𝐑𝐀𝐃𝐎 🔒' : '𝐀𝐁𝐈𝐄𝐑𝐓𝐎 🔓'}*\n ${m.messageStubParameters[0] == 'on' ? '𝐒𝐎𝐋𝐎 𝐀𝐃𝐌𝐈𝐍𝐒 𝐏𝐔𝐄𝐃𝐄𝐍 𝐄𝐒𝐂𝐑𝐈𝐁𝐈𝐑' : '𝐘𝐀 𝐓𝐎𝐃𝐎𝐒 𝐏𝐔𝐄𝐃𝐄𝐍 𝐄𝐒𝐂𝐑𝐈𝐁𝐈𝐑'} 𝐄𝐍 𝐄𝐒𝐓𝐄 𝐆𝐑𝐔𝐏𝐎`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    await this.sendMessage(m.chat, { text: `〔 ${m.messageStubParameters[0] == 'on' ? '🔒' : '🔓'} 〕𝘎𝘳𝘶𝘱𝘰 ${m.messageStubParameters[0] == 'on' ? '𝘤𝘦𝘳𝘳𝘢𝘥𝘰' : '𝘢𝘣𝘪𝘦𝘳𝘵𝘰'}
+> ${m.messageStubParameters[0] == 'on' ? 'Solo admins pueden escribir.' : 'Todos pueden escribir.'}`, mentions: [m.sender] }, { quoted: fkontak })
   } else if (chat.detect && m.messageStubType == 29) {
-    await this.sendMessage(m.chat, { text: `@${m.messageStubParameters[0].split`@`[0]} \`𝐀𝐇𝐎𝐑𝐀 𝐄𝐒 𝐀𝐃𝐌𝐈𝐍𝐈𝐒𝐓𝐑𝐀𝐃𝐎𝐑\`\n\n\`🫵 𝐀𝐂𝐂𝐈𝐎𝐍 𝐇𝐄𝐂𝐇𝐀 𝐏𝐎𝐑\`\n${usuario}`, mentions: [m.sender, m.messageStubParameters[0], ...groupAdmins.map(v => v.id)] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    await this.sendMessage(m.chat, { text: `〔 👑 〕𝘕𝘶𝘦𝘷𝘰 𝘢𝘥𝘮𝘪𝘯
+> @${m.messageStubParameters[0].split('@')[0]} fue promovido por @${m.sender.split('@')[0]}`, mentions: [m.sender, m.messageStubParameters[0]] }, { quoted: fkontak })
   } else if (chat.detect && m.messageStubType == 30) {
-    await this.sendMessage(m.chat, { text: `@${m.messageStubParameters[0].split`@`[0]} \`𝐀𝐇𝐎𝐑𝐀 𝐍𝐎 𝐄𝐒 𝐀𝐃𝐌𝐈𝐍𝐈𝐒𝐓𝐑𝐀𝐃𝐎𝐑\`\n\n\`🫵 𝐀𝐂𝐂𝐈𝐎𝐍 𝐇𝐄𝐂𝐇𝐀 𝐏𝐎𝐑\`\n${usuario}`, mentions: [m.sender, m.messageStubParameters[0], ...groupAdmins.map(v => v.id)] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    await this.sendMessage(m.chat, { text: `〔 🪶 〕𝘈𝘥𝘮𝘪𝘯 𝘳𝘦𝘮𝘰𝘷𝘪𝘥𝘰
+> @${m.messageStubParameters[0].split('@')[0]} fue degradado por @${m.sender.split('@')[0]}`, mentions: [m.sender, m.messageStubParameters[0]] }, { quoted: fkontak })
   } else if (chat.detect && m.messageStubType == 72) {
-    await this.sendMessage(m.chat, { text: `${usuario} 🌟 𝐂𝐀𝐌𝐁𝐈𝐎 𝐋𝐀 𝐃𝐔𝐑𝐀𝐂𝐈𝐎́𝐍 𝐃𝐄 𝐋𝐎𝐒 𝐌𝐄𝐍𝐒𝐀𝐉𝐄𝐒 𝐓𝐄𝐌𝐏𝐎𝐑𝐀𝐋𝐄𝐒 𝐀*@${m.messageStubParameters[0]}*`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    await this.sendMessage(m.chat, { text: `〔 ⏳ 〕𝘔𝘦𝘯𝘴𝘢𝘫𝘦𝘴 𝘵𝘦𝘮𝘱𝘰𝘳𝘢𝘭𝘦𝘴
+> @${m.sender.split('@')[0]} los cambió a *${m.messageStubParameters[0]}*`, mentions: [m.sender] }, { quoted: fkontak })
   } else if (chat.detect && m.messageStubType == 123) {
-    await this.sendMessage(m.chat, { text: `${usuario} 🍭 𝐃𝐄𝐒𝐀𝐂𝐓𝐈𝐕𝐎́ 𝐋𝐎𝐒 𝐌𝐄𝐍𝐒𝐀𝐉𝐄𝐒 𝐓𝐄𝐌𝐏𝐎𝐑𝐀𝐋𝐄𝐒.`, mentions: [m.sender] }, { quoted: fkontak, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+    await this.sendMessage(m.chat, { text: `〔 🗑️ 〕𝘔𝘦𝘯𝘴𝘢𝘫𝘦𝘴 𝘵𝘦𝘮𝘱𝘰𝘳𝘢𝘭𝘦𝘴 𝘥𝘦𝘴𝘢𝘤𝘵𝘪𝘷𝘢𝘥𝘰𝘴
+> por @${m.sender.split('@')[0]}`, mentions: [m.sender] }, { quoted: fkontak })
   } else {
     console.log({
       messageStubType: m.messageStubType,
@@ -74,3 +85,4 @@ export async function before(m, { conn, participants}) {
     })
   }
 }
+
