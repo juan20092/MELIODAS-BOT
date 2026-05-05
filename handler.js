@@ -143,10 +143,23 @@ user.name = nuevo
 }} catch {}
 const chat = global.db.data.chats[m.chat]
 const settings = global.db.data.settings[this.user.jid]  
-const isROwner = [...global.owner.map((number) => number)].map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
+const senderJid = this.decodeJid(m.sender)
+const botJid = this.decodeJid(this.user.jid)
+const senderNumber = (senderJid || '').replace(/[^0-9]/g, '')
+const ownerNumbers = (global.owner || [])
+.map((entry) => Array.isArray(entry) ? entry[0] : entry)
+.map((entry) => String(entry || '').replace(/[^0-9]/g, ''))
+.filter(Boolean)
+const ownerJids = ownerNumbers.map((number) => number + '@s.whatsapp.net')
+const premNumbers = (global.prems || [])
+.map((entry) => Array.isArray(entry) ? entry[0] : entry)
+.map((entry) => String(entry || '').replace(/[^0-9]/g, ''))
+.filter(Boolean)
+const premJids = premNumbers.map((number) => number + '@s.whatsapp.net')
+const isROwner = ownerJids.includes(senderJid) || ownerNumbers.includes(senderNumber)
 const isOwner = isROwner || m.fromMe
-const isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender) || user.premium == true
-const isOwners = [this.user.jid, ...global.owner.map((number) => number + "@s.whatsapp.net")].includes(m.sender)
+const isPrems = isROwner || premJids.includes(senderJid) || premNumbers.includes(senderNumber) || user.premium == true
+const isOwners = [botJid, ...ownerJids].includes(senderJid)
 if (settings.self && !isOwners) return
 if (settings.gponly && !isOwners && !m.chat.endsWith('g.us') && !/code|p|ping|qr|estado|status|infobot|botinfo|report|reportar|invite|join|logout|suggest|help|menu/gim.test(m.text)) return
 if (opts["queque"] && m.text && !(isPrems)) {
